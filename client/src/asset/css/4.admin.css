@@ -1,9 +1,9 @@
 :root {
   --theme-bg: #333333;
   --theme-color: #f5f5f5;
-  --Aheader: navy;
+  --Aheader: #000080;
   --Amain: #113cfc;
-  --Afooter: teal;
+  --Afooter: #008080;
 }
 
 /* TYPOGRAPHY */

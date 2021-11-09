@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import '../asset/css/1.layout.css';
@@ -9,6 +10,7 @@ import { CartProvider } from '../context/cartitem/CartProvider';
 import { CategoryProvider } from '../context/category/CategoryProvider';
 import { OrderProvider } from '../context/order/OrderProvider';
 import { ProductProvider } from '../context/product/ProductProvider';
+import { SettingPorvider } from '../context/setting/SettingProvider';
 import { AuthProvider } from '../context/user/AuthProvider';
 import setHeader from '../utils/setHeader';
 import AdminRouter from './AdminRoutes';
@@ -18,20 +20,22 @@ setHeader(localStorage.token);
 
 function App() {
   return (
-    <AuthProvider>
-      <ProductProvider>
-        <CategoryProvider>
-          <CartProvider>
-            <OrderProvider>
-              <Router>
-                <AdminRouter />
-                <UserRouter />
-              </Router>
-            </OrderProvider>
-          </CartProvider>
-        </CategoryProvider>
-      </ProductProvider>
-    </AuthProvider>
+    <SettingPorvider>
+      <AuthProvider>
+        <ProductProvider>
+          <CategoryProvider>
+            <CartProvider>
+              <OrderProvider>
+                <Router>
+                  <AdminRouter />
+                  <UserRouter />
+                </Router>
+              </OrderProvider>
+            </CartProvider>
+          </CategoryProvider>
+        </ProductProvider>
+      </AuthProvider>
+    </SettingPorvider>
   );
 }
 export default App;

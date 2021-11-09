@@ -1,5 +1,6 @@
 import React from 'react';
 import AdminLayout from '../../common/AdminLayout';
+import SettingForm from './SettingForm';
 
 function Setting() {
   return (
@@ -7,7 +8,7 @@ function Setting() {
       <div id="site-setting">
         <h3 className="as-heading">Website Setting</h3>
 
-        <form action="#" className="ss-form" />
+        <SettingForm />
       </div>
     </AdminLayout>
   );

@@ -1,6 +1,17 @@
 import React from 'react';
 
-function InputGroup({ type, name, placeholder, value, onChange, prepend, append, label }) {
+function InputGroup({
+  type,
+  name,
+  placeholder,
+  value,
+  onChange,
+  prepend,
+  append,
+  label,
+  style,
+  inputStyle,
+}) {
   return (
     <>
       {label && (
@@ -8,7 +19,7 @@ function InputGroup({ type, name, placeholder, value, onChange, prepend, append,
           <label htmlFor="email">{label}</label>
         </p>
       )}
-      <div className="input-group mb-3">
+      <div className="input-group mb-3" style={style}>
         {append && (
           <div className="ig-append">
             <i className={`fas fa-${append}`} />
@@ -20,6 +31,7 @@ function InputGroup({ type, name, placeholder, value, onChange, prepend, append,
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          style={inputStyle}
         />
         {prepend && (
           <div className="ig-prepend">

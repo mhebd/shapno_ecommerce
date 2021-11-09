@@ -47,7 +47,7 @@ const reducer = (state, { type, payload }) => {
       return {
         ...state,
         order: null,
-        userOrders: payload.orders,
+        ...payload,
         isLoading: false,
       };
       break;

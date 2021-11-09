@@ -8,6 +8,7 @@ const multer = require('multer');
 const path = require('path');
 
 // Routes Path
+const settingRoute = require('./route/settingRoute');
 const userRoute = require('./route/userRoute');
 const categoryRoute = require('./route/categoryRoute');
 const productRoute = require('./route/productRoute');
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, '/client/public')))
 database();
 
 // Route End Point
+app.use('/api/v1/setting', settingRoute);
 app.use('/api/v1/user', userRoute);
 app.use('/api/v1/category', categoryRoute);
 app.use('/api/v1/product', productRoute);

@@ -12,7 +12,6 @@ export const OrderProvider = ({ children }) => {
   const initialState = {
     order: null,
     orders: [],
-    userOrders: [],
     isLoading: true,
     message: null,
   };

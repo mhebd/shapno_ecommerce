@@ -4,7 +4,7 @@
 :root {
   --lobster: 'Lobster Two', cursive;
   --roboto: 'Roboto', sans-serif;
-  --footer: rgb(51, 62, 79);
+  --footer: #333e4f;
 }
 
 html {

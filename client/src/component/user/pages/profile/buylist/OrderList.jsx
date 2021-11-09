@@ -8,7 +8,7 @@ import Profile from '../Profile';
 
 function OrderList(props) {
   // eslint-disable-next-line no-unused-vars
-  const { isLoading, userOrders, getUserOrders, removeOrderItem } = useOrder();
+  const { isLoading, orders, getUserOrders, removeOrderItem } = useOrder();
 
   const [items, setItems] = useState([]);
 
@@ -18,8 +18,8 @@ function OrderList(props) {
   }, []);
 
   useEffect(() => {
-    setItems(userOrders);
-  }, [userOrders]);
+    setItems(orders);
+  }, [orders]);
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading

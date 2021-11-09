@@ -7,7 +7,7 @@ import CartItemWrap from './CartItemWrap';
 
 function HUserInfo() {
   // const [uInfo, setUInfo] = useState(null);
-  const [authenticated, setAuthenticated] = useState(false);
+  // const [authenticated, setAuthenticated] = useState(false);
   const { isLoading, isAuthenticated, user, loadUser, userLogout } = useAuth();
 
   const [totalItem, setTotalItem] = useState(0);
@@ -16,9 +16,9 @@ function HUserInfo() {
   const { getCartItems, total, cartitems, removeCartItem } = useCart();
 
   useEffect(() => {
-    getCartItems();
+    if (isAuthenticated) getCartItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isAuthenticated]);
 
   useEffect(() => {
     setTotalItem(total);
@@ -33,19 +33,19 @@ function HUserInfo() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    setAuthenticated(isAuthenticated);
-    // setUInfo(user);
-  }, [isAuthenticated, user]);
+  // useEffect(() => {
+  //   setAuthenticated(isAuthenticated);
+  //   // setUInfo(user);
+  // }, [isAuthenticated]);
 
   return (
     <div className="col-7 col-m3 col-l4 hu-info">
-      {!isLoading && !authenticated && (
+      {!isLoading && !isAuthenticated && (
         <Link to="/login" className="btn login-btn">
           Login
         </Link>
       )}
-      {!isLoading && authenticated && (
+      {!isLoading && isAuthenticated && (
         <Link to="/profile/about" className="user-btn">
           {user?.avatar ? (
             <img src={`../uploads/user/${user?.avatar}`} alt="" />
@@ -58,13 +58,13 @@ function HUserInfo() {
         <span className="tsc">{totalItem}</span>
         <i className="fas fa-shopping-cart" />
       </Button>
-      {!isLoading && authenticated && (
+      {!isLoading && isAuthenticated && (
         <Button onClick={() => userLogout()} classes="logout-btn ml-1">
           <i className="fas fa-sign-out-alt" />
         </Button>
       )}
 
-      {!isLoading && authenticated && user.type === 'user' && <Link to="/admin">Dashboard</Link>}
+      {!isLoading && isAuthenticated && user?.type === 'user' && <Link to="/admin">Dashboard</Link>}
 
       <CartItemWrap items={items} removeCartItem={removeCartItem} />
     </div>

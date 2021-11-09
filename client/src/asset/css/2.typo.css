@@ -1,5 +1,5 @@
 :root {
-  --theme: orange;
+  --theme: #ffa500;
   --theme-reverse: #fefefe;
   --link: #229944;
   --bg: #fefefe;
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: var(--bg);
 }
 
 body a {
