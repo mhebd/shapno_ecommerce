@@ -1,0 +1,210 @@
+<!-- 
+	=> Title: E-commerce Website.
+	=> Author: Mehedi Hassan.
+	=> Created: 15 October, 2021
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E-Commerce Theme</title>
+	<link rel="stylesheet" href="asset/css/typo.css">
+	<link rel="stylesheet" href="asset/css/layout.css">
+	<link rel="stylesheet" href="asset/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+</head>
+<body>
+	<!-- Site Header Section -->
+	<header>
+		<!-- Header Top Section -->
+		<div class="header-top">
+			<div class="container">
+				<div class="top-info">
+					<p class="py-1">
+						<i class="fas fa-phone pr-1"></i>
+						+880 1521 458253
+					</p>
+					<p class="py-1">
+						<i class="fas fa-envelope pr-1"></i>
+						mhemonhossain@gmail.com
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Section -->
+		<div class="header">
+			<div class="container py-2">
+				<div class="grid-row">
+					<div class="col-5 col-m3 col-l4 logo">
+						<!-- <a href="#">e-Commerce</a> -->
+						<a href="#">
+							<img src="images/logo.jpg" alt="">
+						</a>
+					</div>
+
+					<div class="col-12 col-m6 col-l4 search-box">
+						<form action="#" class="form">
+							<div class="input-group">
+								<div class="ig-append"><i class="fas fa-search"></i></div>
+								<input type="text" name="text" placeholder="Search Your Product...">
+							</div>
+						</form>
+					</div>
+
+					<div class="col-7 col-m3 col-l4 hu-info">
+						<!-- <a href="#" class="btn login-btn">Login</a> -->
+						<a href="#" class="user-btn">
+							<img src="images/avatar.jpg" alt="">
+						</a>
+						<button class="btn cart-btn ml-2"><i class="fas fa-shopping-cart"></i></button>
+						<a href="#" class="btn logout-btn ml-1"><i class="fas fa-sign-out-alt"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navbar Section -->
+		<nav class="navbar">
+			<div class="container">
+				<div class="menu-box">
+					<div class="cat-menu-wrap mr-3">
+						<button class="btn cm-toggle-btn">
+							Categories 
+							<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
+						</button>
+
+						<ul class="cat-menu">
+							<li class="menu-item"><a href="#" class="menu-link">Category 1</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 2</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 3</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 4</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 5</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 6</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 7</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 8</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Category 9</a></li>
+						</ul>
+					</div>
+					<div class="main-menu-wrap">
+						<button class="mm-toggle-btn">
+							<i class="fas fa-bars"></i>
+						</button>
+						<ul class="main-menu">
+							<li class="menu-item"><a href="#" class="menu-link">All Shops</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Campaigns</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Top Ten</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">POM</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+	<!-- Site Main Section -->
+	<main>
+		<div class="container">
+			<div class="signup-wrap" style="background-image:url(images/illustration-4.png);">
+				<form action="#" class="signup-form mx-auto">
+					<h2 class="form-heading">Create A New Account</h2>
+
+					<p class="mb-2">
+						<label for="name">Enter Your Name</label>
+					</p>
+					<div class="input-group mb-3">
+						<input type="text" name="name" placeholder="Your Name">
+						<div class="ig-prepend">
+							<i class="fas fa-user"></i>
+						</div>
+					</div>
+
+					<p class="mb-2">
+						<label for="email">Enter Your Email</label>
+					</p>
+					<div class="input-group mb-3">
+						<input type="email" name="email" placeholder="Your Email">
+						<div class="ig-prepend">
+							<i class="fas fa-envelope"></i>
+						</div>
+					</div>
+
+					<p class="mb-2">
+						<label for="password">Enter Your Password</label>
+					</p>
+					<div class="input-group mb-3">
+						<input type="password" name="password" placeholder="Your Passwrod">
+						<div class="ig-prepend">
+							<i class="fas fa-key"></i>
+						</div>
+					</div>
+
+					<p class="mb-2">
+						<label for="confirm-password">Confirm Your Password</label>
+					</p>
+					<div class="input-group mb-3">
+						<input type="password" name="password2" placeholder="Re-type Passwrod">
+						<div class="ig-prepend">
+							<i class="fas fa-key"></i>
+						</div>
+					</div>
+
+					<button type="submit" class="btn submit-btn">Login</button>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<!-- Site Footer Section -->
+	<footer class="py-3">
+		<div class="container">
+			<div class="footer-top">
+				<div class="grid-row">
+					<div class="col-m4 pb-3">
+						<h3 class="ft-heading">Important Link</h3>
+						<ul class="footer-menu">
+							<li class="menu-item"><a href="#" class="menu-link">About Us</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Privacy Policy</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Cookie Policy</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Terms & Condition</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Returns & Replacement</a></li>
+						</ul>
+					</div>
+					<div class="col-m4 pb-3">
+						<h3 class="ft-heading">Contact Info</h3>
+						<div class="contact-info">
+							<address class="mb-1">House #8, Road # 14, Dhanmondi, Dhaka-1209.</address>
+							<p class="mb-1">Email: support@ecommerce.com</p>
+							<p class="mb-1">Contact no: 09622111666</p>
+						</div>
+					</div>
+					<div class="col-m4 pb-3">
+						<h3 class="ft-heading">Get In Touce</h3>
+						<ul class="social-menu">
+							<li class="menu-item"><a href="#" class="menu-link"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="menu-item"><a href="#" class="menu-link"><i class="fab fa-instagram"></i></a></li>
+							<li class="menu-item"><a href="#" class="menu-link"><i class="fab fa-twitter"></i></a></li>
+							<li class="menu-item"><a href="#" class="menu-link"><i class="fab fa-linkedin-in"></i></a></li>
+							<li class="menu-item"><a href="#" class="menu-link"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom pt-2 text-center">
+				<p class="copyright">
+					<a href="#">eCommerce</a>
+					&copy; 2021. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="asset/js/script.js"></script>
+</body>
+</html>

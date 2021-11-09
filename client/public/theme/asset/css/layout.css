@@ -1,0 +1,244 @@
+/* 
+	-> Layout: CSS Grid Layout
+	-> Author: Mehedi Hassan
+	-> Created: 08 October, 2021
+ */
+
+/* ==============================
+		Grid Container Styling 
+================================*/
+.grid-row {
+ display: grid;
+ grid-template-columns: repeat(12, 1fr);
+ grid-gap: .95rem;
+}
+
+
+
+/*==================================
+			 	Grid Item Styling
+===================================*/
+.grid-row [class|="col"] {
+	grid-column: 1 / span 12;
+}
+
+/*==================================
+			 			Normal 
+===================================*/
+.grid-row .col-1 {
+	grid-column: auto / span 1;
+}
+
+.grid-row .col-2 {
+	grid-column: auto / span 2;
+}
+
+.grid-row .col-3 {
+	grid-column: auto / span 3;
+}
+
+.grid-row .col-4 {
+	grid-column: auto / span 4;
+}
+
+.grid-row .col-5 {
+	grid-column: auto / span 5;
+}
+
+.grid-row .col-6 {
+	grid-column: auto / span 6;
+}
+
+.grid-row .col-7 {
+	grid-column: auto / span 7;
+}
+
+.grid-row .col-8 {
+	grid-column: auto / span 8;
+}
+
+.grid-row .col-9 {
+	grid-column: auto / span 9;
+}
+
+.grid-row .col-10 {
+	grid-column: auto / span 10;
+}
+
+.grid-row .col-11 {
+	grid-column: auto / span 11;
+}
+
+.grid-row .col-12 {
+	grid-column: auto / span 12;
+}
+
+
+
+
+/*===================================
+						Small Device 
+=====================================*/
+@media (min-width: 576px) {
+	.grid-row .col-s1 {
+		grid-column: auto / span 1;
+	}
+
+	.grid-row .col-s2 {
+		grid-column: auto / span 2;
+	}
+
+	.grid-row .col-s3 {
+		grid-column: auto / span 3;
+	}
+
+	.grid-row .col-s4 {
+		grid-column: auto / span 4;
+	}
+
+	.grid-row .col-s5 {
+		grid-column: auto / span 5;
+	}
+
+	.grid-row .col-s6 {
+		grid-column: auto / span 6;
+	}
+
+	.grid-row .col-s7 {
+		grid-column: auto / span 7;
+	}
+
+	.grid-row .col-s8 {
+		grid-column: auto / span 8;
+	}
+
+	.grid-row .col-s9 {
+		grid-column: auto / span 9;
+	}
+
+	.grid-row .col-s10 {
+		grid-column: auto / span 10;
+	}
+
+	.grid-row .col-s11 {
+		grid-column: auto / span 11;
+	}
+
+	.grid-row .col-s12 {
+		grid-column: auto / span 12;
+	}
+}
+
+
+
+/*==================================
+				Medium Device 
+===================================*/
+@media (min-width: 768px) {
+	.grid-row .col-m1 {
+		grid-column: auto / span 1;
+	}
+
+	.grid-row .col-m2 {
+		grid-column: auto / span 2;
+	}
+
+	.grid-row .col-m3 {
+		grid-column: auto / span 3;
+	}
+
+	.grid-row .col-m4 {
+		grid-column: auto / span 4;
+	}
+
+	.grid-row .col-m5 {
+		grid-column: auto / span 5;
+	}
+
+	.grid-row .col-m6 {
+		grid-column: auto / span 6;
+	}
+
+	.grid-row .col-m7 {
+		grid-column: auto / span 7;
+	}
+
+	.grid-row .col-m8 {
+		grid-column: auto / span 8;
+	}
+
+	.grid-row .col-m9 {
+		grid-column: auto / span 9;
+	}
+
+	.grid-row .col-m10 {
+		grid-column: auto / span 10;
+	}
+
+	.grid-row .col-m11 {
+		grid-column: auto / span 11;
+	}
+
+	.grid-row .col-m12 {
+		grid-column: auto / span 12;
+	}
+}
+
+
+
+
+
+/*==================================
+						Large Device 
+====================================*/
+@media (min-width: 992px) {
+	.grid-row .col-l1 {
+		grid-column: auto / span 1;
+	}
+
+	.grid-row .col-l2 {
+		grid-column: auto / span 2;
+	}
+
+	.grid-row .col-l3 {
+		grid-column: auto / span 3;
+	}
+
+	.grid-row .col-l4 {
+		grid-column: auto / span 4;
+	}
+
+	.grid-row .col-l5 {
+		grid-column: auto / span 5;
+	}
+
+	.grid-row .grid-row .col-l6 {
+		grid-column: auto / span 6;
+	}
+
+	.grid-row .grid-row .col-l7 {
+		grid-column: auto / span 7;
+	}
+
+	.grid-row .grid-row .col-l8 {
+		grid-column: auto / span 8;
+	}
+
+	.grid-row .grid-row .col-l9 {
+		grid-column: auto / span 9;
+	}
+
+	.grid-row .col-l10 {
+		grid-column: auto / span 10;
+	}
+
+	.grid-row .col-l11 {
+		grid-column: auto / span 11;
+	}
+
+	.grid-row .col-l12 {
+		grid-column: auto / span 12;
+	}
+}
+
+
