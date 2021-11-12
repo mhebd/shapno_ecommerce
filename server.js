@@ -14,6 +14,7 @@ const categoryRoute = require('./route/categoryRoute');
 const productRoute = require('./route/productRoute');
 const cartitemRoute = require('./route/cartitemRoute');
 const orderRoute = require('./route/orderRoute');
+const pageRoute = require('./route/pageRoute');
 
 // Create Server
 const app = express();
@@ -35,6 +36,7 @@ app.use('/api/v1/category', categoryRoute);
 app.use('/api/v1/product', productRoute);
 app.use('/api/v1/cartitem', cartitemRoute);
 app.use('/api/v1/order', orderRoute);
+app.use('/api/v1/page', pageRoute);
 
 // Set Routting 
 app.get('/', (req, res, next) => {

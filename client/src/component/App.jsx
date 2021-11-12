@@ -9,6 +9,7 @@ import '../asset/js/script';
 import { CartProvider } from '../context/cartitem/CartProvider';
 import { CategoryProvider } from '../context/category/CategoryProvider';
 import { OrderProvider } from '../context/order/OrderProvider';
+import { PageProvider } from '../context/page/PageProvider';
 import { ProductProvider } from '../context/product/ProductProvider';
 import { SettingPorvider } from '../context/setting/SettingProvider';
 import { AuthProvider } from '../context/user/AuthProvider';
@@ -22,18 +23,20 @@ function App() {
   return (
     <SettingPorvider>
       <AuthProvider>
-        <ProductProvider>
-          <CategoryProvider>
-            <CartProvider>
-              <OrderProvider>
-                <Router>
-                  <AdminRouter />
-                  <UserRouter />
-                </Router>
-              </OrderProvider>
-            </CartProvider>
-          </CategoryProvider>
-        </ProductProvider>
+        <PageProvider>
+          <ProductProvider>
+            <CategoryProvider>
+              <CartProvider>
+                <OrderProvider>
+                  <Router>
+                    <AdminRouter />
+                    <UserRouter />
+                  </Router>
+                </OrderProvider>
+              </CartProvider>
+            </CategoryProvider>
+          </ProductProvider>
+        </PageProvider>
       </AuthProvider>
     </SettingPorvider>
   );

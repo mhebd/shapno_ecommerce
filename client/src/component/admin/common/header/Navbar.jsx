@@ -10,6 +10,7 @@ function Navbar() {
         <MenuLink link="/admin/users">Users</MenuLink>
         <MenuLink link="/admin/categories">Categories</MenuLink>
         <MenuLink link="/admin/orders">Orders</MenuLink>
+        <MenuLink link="/admin/pages">Pages</MenuLink>
       </ul>
     </nav>
   );

@@ -6,6 +6,7 @@ import CheckOut from './user/pages/checkout/CheckOut';
 import Home from './user/pages/home/Home';
 import Login from './user/pages/login/Login';
 import Order from './user/pages/order/Order';
+import Page from './user/pages/page/Page';
 import Product from './user/pages/product/Product';
 import ProfileAbout from './user/pages/profile/about/About';
 import ProfileAvatar from './user/pages/profile/avatar/Avatar';
@@ -23,6 +24,7 @@ function UserRoutes() {
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/checkout" component={CheckOut} />
+      <Route exact path="/page/:slug" component={Page} />
       <Route exact path="/product/search" component={Search} />
       <Route exact path="/product/:id" component={Product} />
       <Route exact path="/product/category/:id" component={Category} />

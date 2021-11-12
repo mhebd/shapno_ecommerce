@@ -54,7 +54,6 @@ const settingSchema = mongoose.Schema({
     link: String,
   }],
   socialMenu: [{
-    text: String,
     link: String,
     icon: String,
   }],

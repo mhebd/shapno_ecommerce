@@ -16,12 +16,34 @@ function SettingForm() {
     afc: '',
   });
 
+  const [social, setSocial] = useState({
+    socialIcon: '',
+    socialLink: '',
+  });
+
+  const [socialMenu, setSocialMenu] = useState([]);
+  // const [footerMneu, setFooterMenu] = useState([]);
+
   const { getSetting, setting, updateSetting } = useSetting();
-  console.log(basic);
+  console.log(socialMenu, social);
 
   const { siteName, ufg, ubg, ulc, uhc, afg, abg, amc, ahc, afc } = basic;
+  const { socialIcon, socialLink } = social;
 
   const onChangeHdl = (e) => setBasic({ ...basic, [e.target.name]: e.target.value });
+  const socialChange = (e) => setSocial({ ...social, [e.target.name]: e.target.value });
+
+  const addSocialMenu = () => {
+    if (!socialIcon || !socialLink) {
+      console.log('Enter social icon name & link.');
+    } else {
+      setSocialMenu([...socialMenu, { icon: socialIcon, link: socialLink }]);
+      setSocial({
+        socialIcon: '',
+        socialLink: '',
+      });
+    }
+  };
 
   // Get Setting
   useEffect(() => {
@@ -44,6 +66,7 @@ function SettingForm() {
         ahc: setting.adminBaseStyle.header,
         afc: setting.adminBaseStyle.footer,
       });
+      setSocialMenu(setting.socialMenu);
     }
   }, [setting]);
 
@@ -64,6 +87,7 @@ function SettingForm() {
         header: ahc,
         footer: afc,
       },
+      socialMenu,
     });
   };
 
@@ -185,6 +209,44 @@ function SettingForm() {
               style={{ width: '125px' }}
               inputStyle={{ padding: 0 }}
             />
+          </div>
+        </div>
+
+        <h3 className="my-3">Social Mneu Setting</h3>
+
+        <div className="social-menu-list-wrap">
+          <ul className="list">
+            {socialMenu.map((sitem) => (
+              <li key={Math.random()} className="list-item" title={sitem.link}>
+                {sitem.icon}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="grid-row">
+          <div className="col-s3 col-m2 mb-3">
+            <InputGroup
+              type="text"
+              name="socialIcon"
+              label="Social Icon"
+              onChange={socialChange}
+              value={socialIcon}
+            />
+          </div>
+          <div className="col-s7 col-m8 mb-3">
+            <InputGroup
+              type="text"
+              name="socialLink"
+              label="Social Link"
+              onChange={socialChange}
+              value={socialLink}
+            />
+          </div>
+          <div className="col-s2 col-m2 mb-3">
+            <button type="button" onClick={() => addSocialMenu()} className="btn add-btn">
+              Add
+            </button>
           </div>
         </div>
 
