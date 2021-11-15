@@ -3,13 +3,13 @@ import ContactInfo from './ContactInfo';
 import GetInTouch from './GetInTouch';
 import ImportantLink from './ImportantLink';
 
-function FooterTop() {
+function FooterTop({ data }) {
   return (
     <div className="footer-top">
       <div className="grid-row">
-        <ImportantLink />
-        <ContactInfo />
-        <GetInTouch />
+        <ImportantLink data={data} />
+        <ContactInfo data={data} />
+        <GetInTouch data={data} />
       </div>
     </div>
   );

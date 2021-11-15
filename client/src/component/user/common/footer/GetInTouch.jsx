@@ -1,26 +1,18 @@
 import React from 'react';
-import MenuLink from '../../reusable/MenuLink';
 
-function GetInTouch() {
+function GetInTouch({ data }) {
   return (
     <div className="col-m4 pb-3">
       <h3 className="ft-heading">Get In Touch</h3>
       <ul className="social-menu">
-        <MenuLink link="/">
-          <i className="fab fa-facebook-f" />
-        </MenuLink>
-        <MenuLink link="/">
-          <i className="fab fa-instagram" />
-        </MenuLink>
-        <MenuLink link="/">
-          <i className="fab fa-twitter" />
-        </MenuLink>
-        <MenuLink link="/">
-          <i className="fab fa-linkedin-in" />
-        </MenuLink>
-        <MenuLink link="/">
-          <i className="fab fa-youtube" />
-        </MenuLink>
+        {data &&
+          data.socialMenu.map((item) => (
+            <li className="menu-item">
+              <a href={item.link} target="_blank" rel="noreferrer" className="menu-link">
+                <i className={`fab fa-${item.icon}`} />
+              </a>
+            </li>
+          ))}
       </ul>
     </div>
   );
