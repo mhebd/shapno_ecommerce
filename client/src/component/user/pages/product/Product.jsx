@@ -11,6 +11,7 @@ import ProductReviewForm from './ProductReviewForm';
 import ProductReviews from './ProductReviews';
 
 function Product({ match }) {
+  console.log(match);
   const [sProduct, setSProduct] = useState(null);
 
   const { isLoading, product, getSingleProduct, addReview, message } = useProduct();
