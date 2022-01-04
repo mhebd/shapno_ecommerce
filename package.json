@@ -4,7 +4,8 @@
   "description": "Shapno is a online store/e-commerce site.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Md. Mehedi Hassan",
   "license": "MIT",
