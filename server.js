@@ -23,7 +23,6 @@ const app = express();
 app.use(morgan('dev'))
 app.use(cors());
 app.use(express.json())
-app.use(express.static(path.join(__dirname, '/client/public')))
 // app.use(multer());
 
 // Add Database
@@ -39,9 +38,17 @@ app.use('/api/v1/order', orderRoute);
 app.use('/api/v1/page', pageRoute);
 
 // Set Routting 
-app.get('/', (req, res, next) => {
-	res.send('hello Node')
-})
+if(process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+
+	app.get('*', (req,  res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html' ))
+	});
+} else if(process.env.NODE_ENV === 'development') {
+	app.get('/', (req, res) => {
+		res.send('Hello, Developer...')
+	});
+}
 
 // Show Error Message
 app.use(error);
