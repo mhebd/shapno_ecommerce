@@ -96,7 +96,7 @@ function SignupForm({ history }) {
       </p>
 
       <Button type="submit" classes="submit-btn">
-        Login
+        Sign Up Now
       </Button>
       <ToastContainer />
     </form>

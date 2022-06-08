@@ -46,6 +46,7 @@ function ReviewForm({ addReview, id }) {
                 value={message}
                 onChange={onChangHdl}
                 className="py-1 px-2"
+                placeholder="What do you think about this product??"
               />
             </div>
           </div>

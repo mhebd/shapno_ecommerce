@@ -4,9 +4,9 @@ import React from 'react';
 function ProductDesc({ product }) {
   return (
     <div className="box">
-      <div className="sp-description">
+      <div className="sp-description p-3">
         <h3 className="spd-heading">Product Detials</h3>
-        <div dangerouslySetInnerHTML={{ __html: product.description }} />
+        <div className="ps-4" dangerouslySetInnerHTML={{ __html: product.description }} />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import Loading from '../../reusable/Loading';
 import CartItemsList from './CartItemsList';
 import CheckOutDetails from './CheckOutDetails';
 
-function CheckOut(props) {
+function CheckOut({ history, ...rest }) {
   // eslint-disable-next-line no-unused-vars
   const { isLoading, getCartItems, cartitems, removeCartItem, updateCartItem } = useCart();
 
@@ -24,7 +24,7 @@ function CheckOut(props) {
 
   useEffect(() => {
     if (!isLoading && cartitems.length === 0) {
-      props.history.push('/');
+      history.push('/');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartitems]);
@@ -43,7 +43,7 @@ function CheckOut(props) {
                 />
               </div>
               <div className="col-m5 mb-3">
-                <CheckOutDetails items={items} {...props} />
+                <CheckOutDetails items={items} {...rest} />
               </div>
             </div>
           </Box>

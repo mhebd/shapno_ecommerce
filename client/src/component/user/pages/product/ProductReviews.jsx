@@ -37,6 +37,8 @@ function ProductReviews({ product }) {
               <p className="message">{rev.message}</p>
             </div>
           ))}
+
+        {product?.reviews.length <= 0 && <p>No review found!</p>}
       </div>
     </div>
   );
